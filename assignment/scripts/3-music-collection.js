@@ -25,11 +25,21 @@ addToCollection('Hollow Bodies', 'blessthefall', 2013);
 
 console.log('Display music collection: ', collection);
 
-function showCollection() {
-    for (let i=0; i<collection.length; i++){
-        collection.title = title;
-        collection.artist = artist;
-        collection.yearPublished = yearPublished;
-        console.log(`${title} by ${artist}, published in ${yearPublished}`);
-    }
+
+
+
+// Add a function named showCollection. This function should:
+// Take in an array parameter. (This allows it to be reused to show any collection, like the results from the find or search.)
+function showCollection(musicArray) {
+    
+    // Console.log the number of items in the array.
+    console.log(musicArray);   
+    
+    // Loop over the array and console.log each album's information formatted like: TITLE by ARTIST, published in YEAR.
+    for (let i=0; i<musicArray.length; i++){
+        console.log(`${collection[i].title} by ${collection[i].artist}, published in ${collection[i].yearPublished}`);
+        }
 }
+
+showCollection([]);
+showCollection(collection);
