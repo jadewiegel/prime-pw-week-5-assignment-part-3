@@ -25,4 +25,11 @@ addToCollection('Hollow Bodies', 'blessthefall', 2013);
 
 console.log('Display music collection: ', collection);
 
-
+function showCollection() {
+    for (let i=0; i<collection.length; i++){
+        collection.title = title;
+        collection.artist = artist;
+        collection.yearPublished = yearPublished;
+        console.log(`${title} by ${artist}, published in ${yearPublished}`);
+    }
+}
